@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ProductController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+</style>
+
+<div class="example-wrapper">
+    <h1>Hello You are seeing the product of ID : {{ id }}! ✅</h1>
+    <ul>
+        <li><strong>Name:</strong> {{ product.name }}</li>
+        <li><strong>Size:</strong> {{ product.size }}</li>
+        <li><strong>Description:</strong> {{ product.description }}</li>
+    </ul>
+    
+    <p> To go to the Product page <a href="{{path('product') }}">Click Here</a>
+</div>
+{% endblock %}

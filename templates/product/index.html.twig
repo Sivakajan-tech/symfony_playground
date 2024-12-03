@@ -49,6 +49,8 @@
                     <td>{{ product.name }}</td>
                     <td>{{ product.size }}</td>
                     <td>{{ product.description }}</td>
+                    <td><a href="{{path('product_edit', {'id' : product.id })}}" > Edit </a> </td>
+                    <td><a href="{{path('product_delete', {'id' : product.id })}}" > Delete </a> </td>
                 </tr>
             {% endfor %}
         </tbody>

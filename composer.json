@@ -1,4 +1,6 @@
 {
+    "name": "symfony/simple-product-manager",
+    "description": "A Symfony project handling easy product management",
     "type": "project",
     "license": "proprietary",
     "minimum-stability": "stable",

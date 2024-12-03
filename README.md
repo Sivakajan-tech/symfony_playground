@@ -18,4 +18,3 @@
 | `composer require symfony/form`              | Installs the Symfony Form component for creating and processing forms.         |
 | `composer require symfony/profiler-pack`     | Installs the Symfony Profiler Pack for debugging and performance analysis.     |
 | `composer require symfony/validator`         | Installs the Symfony Validator component for validating data.                  |
-|

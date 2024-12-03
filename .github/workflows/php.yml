@@ -35,13 +35,6 @@ jobs:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
         run: composer install --prefer-dist --no-progress --no-scripts
 
-      - name: Run post-install scripts (e.g., cache clear)
-        env:
-          APP_ENV: ${{ secrets.APP_ENV }}
-          APP_SECRET: ${{ secrets.APP_SECRET }}
-          DATABASE_URL: ${{ secrets.DATABASE_URL }}
-        run: composer run-script post-install-cmd
-
     # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
     # Docs: https://getcomposer.org/doc/articles/scripts.md
 

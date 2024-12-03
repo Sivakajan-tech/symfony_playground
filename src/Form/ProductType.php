@@ -16,7 +16,7 @@ class ProductType extends AbstractType
             ->add('name')
             ->add('description')
             ->add('size')
-            ->add('save', SubmitType::class, ['label' => 'Create Product'])
+            ->add('save', SubmitType::class, ['label' => $options['submit_label']])
         ;
     }
 
@@ -24,6 +24,7 @@ class ProductType extends AbstractType
     {
         $resolver->setDefaults([
             'data_class' => Product::class,
+            'submit_label' => 'Submit',
         ]);
     }
 }

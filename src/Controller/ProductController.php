@@ -46,7 +46,9 @@ class ProductController extends AbstractController
     public function new(Request $request, EntityManagerInterface $emi): Response
     {
         $product = new Product();
-        $form = $this->createForm(ProductType::class, $product);
+        $form = $this->createForm(ProductType::class, $product, [
+            'submit_label' => 'Create Product',
+        ]);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
@@ -68,7 +70,9 @@ class ProductController extends AbstractController
     public function edit($id, Request $request, EntityManagerInterface $emi): Response
     {
         $product = $emi->getRepository(Product::class)->find($id);
-        $form = $this->createForm(ProductType::class, $product);
+        $form = $this->createForm(ProductType::class, $product, [
+            'submit_label' => 'Edit Product',
+        ]);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {

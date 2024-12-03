@@ -15,4 +15,7 @@
 | `composer require --dev doctrine/doctrine-fixtures-bundle:^3.6` | Installs the Doctrine Fixtures Bundle for managing test data.                |
 | `php .\bin\console doctrine:fixture:load`    | Loads data fixtures into the database.                                         |
 | `php .\bin\console dbal:run-sql "SELECt * FROM product"` | Executes a raw SQL query to fetch all records from the `product` table.     |
+| `composer require symfony/form`              | Installs the Symfony Form component for creating and processing forms.         |
+| `composer require symfony/profiler-pack`     | Installs the Symfony Profiler Pack for debugging and performance analysis.     |
+| `composer require symfony/validator`         | Installs the Symfony Validator component for validating data.                  |
 |

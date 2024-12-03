@@ -28,15 +28,13 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-php-
 
-      - name: Set environment variables
+      - name: Install dependencies
         env:
           APP_ENV: ${{ secrets.APP_ENV }}
           APP_SECRET: ${{ secrets.APP_SECRET }}
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
-        run: echo "Environment variables set."
+        run: composer install --prefer-dist --no-progress --no-scripts
 
-      - name: Install dependencies
-        run: composer install --prefer-dist --no-progress
 
     # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
     # Docs: https://getcomposer.org/doc/articles/scripts.md
